@@ -56,21 +56,4 @@ function clicked(value){
         expectedId = 1;
         tally++;
     }
-
-    if (c.length == boxNum){
-        const msgBox = document.getElementById('messageBox')
-        const message = document.createElement('h1');
-        message.textContent = "You have picked the lock. Well done!"
-        message.setAttribute('class', 'msg')
-        msgBox.appendChild(message)
-
-        const tallyMsg = document.createElement('h4');
-        if (tally == 1){
-            tallyMsg.textContent = `It only took you ${tally} try! You must be an expert lockpicker.`
-        } else {
-            tallyMsg.textContent = `It took you ${tally} tries, but you got there!`
-        }
-        tallyMsg.setAttribute('class', 'msg')
-        msgBox.appendChild(tallyMsg)
-    }
 }
