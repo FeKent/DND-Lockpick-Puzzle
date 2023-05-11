@@ -4,8 +4,6 @@ let expectedId = 1;
 //number to check button ID against
 let c = [];
 //clicked array
-let tally = 0
-//number of tries
 
 function divCreation(num){
     const idArray = Array.from({length: num}, (_, index) => index + 1);
@@ -28,11 +26,6 @@ function newCreation(input){
     while (container.hasChildNodes())
         container.removeChild(container.firstChild)
     divCreation(input)
-
-    const msgBox = document.getElementById('messageBox')
-    tally = 0
-    while (msgBox.hasChildNodes())
-        msgBox.removeChild(msgBox.firstChild)
 }
 
 function changeColor(value){
@@ -54,6 +47,5 @@ function clicked(value){
         resetColors()
         c.length = 0;
         expectedId = 1;
-        tally++;
     }
 }
